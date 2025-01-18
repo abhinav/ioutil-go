@@ -1,0 +1,27 @@
+[tools.go]
+version = "1.23.4"
+backend = "core:go"
+
+[tools.go.checksums]
+"go1.23.4.darwin-arm64.tar.gz" = "sha256:87d2bb0ad4fe24d2a0685a55df321e0efe4296419a9b3de03369dbe60b8acd3a"
+
+[tools."ubi:abhinav/doc2go"]
+version = "0.8.1"
+backend = "ubi:abhinav/doc2go"
+
+[tools."ubi:abhinav/doc2go".checksums]
+doc2go-macos-aarch64 = "sha256:1ded7e126bdaee48c15895b88e1042c5265cb9a45ec78911283d35e716b0d30a"
+
+[tools."ubi:golangci/golangci-lint"]
+version = "1.63.4"
+backend = "ubi:golangci/golangci-lint"
+
+[tools."ubi:golangci/golangci-lint".checksums]
+golangci-lint-macos-aarch64 = "sha256:30a3c6b51fbd8ea32af4dd142dff5f8c4d6112ec279370b13bc4b46caaffbca9"
+
+[tools."ubi:miniscruff/changie"]
+version = "1.21.0"
+backend = "ubi:miniscruff/changie"
+
+[tools."ubi:miniscruff/changie".checksums]
+changie-macos-aarch64 = "sha256:704f4bec07dab6e4006870415a93724e4f8705b00a905981711f29a9be5463c3"
