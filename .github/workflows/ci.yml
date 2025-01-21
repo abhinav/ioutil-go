@@ -20,7 +20,8 @@ jobs:
         cache_key_prefix: mise-v0-stable
     - run: mise run lint
 
-  build:
+  test:
+    name: Test/ Go (${{ matrix.mise-env }})
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -38,4 +39,4 @@ jobs:
     - name: Test
       run: mise run test:cover -race
     - name: Upload coverage
-      uses: codecov/codecov-action@v4
+      uses: codecov/codecov-action@v5
