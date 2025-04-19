@@ -11,7 +11,7 @@ import (
 func TestTestLogWriter(t *testing.T) {
 	var fakeT fakeTestLogger
 	w := ioutil.TestLogWriter(&fakeT, "prefix: ")
-	fmt.Fprint(w, "hello\nworld")
+	_, _ = fmt.Fprint(w, "hello\nworld")
 
 	// "world" is buffered, so it won't show yet.
 	if got, want := fakeT.Logs(), []string{"prefix: hello"}; !reflect.DeepEqual(got, want) {
