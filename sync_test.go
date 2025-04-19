@@ -28,14 +28,14 @@ func TestSyncWriter_race(t *testing.T) {
 
 	giveBytes := []byte("hello")
 
-	for i := 0; i < NumWorkers; i++ {
+	for range NumWorkers {
 		go func() {
 			defer done.Done()
 
 			ready.Done() // I'm ready.
 			ready.Wait() // Are others ready?
 
-			for i := 0; i < NumWrites; i++ {
+			for range NumWrites {
 				if _, err := syncWriter.Write(giveBytes); err != nil {
 					t.Errorf("Write failed: %v", err)
 					return
